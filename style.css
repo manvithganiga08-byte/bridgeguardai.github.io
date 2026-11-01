@@ -1,13 +1,11 @@
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* =========================================
-   BODY
-   ========================================= */
-
+/* BODY */
 body {
     font-family: Arial, sans-serif;
     background: #000000;
@@ -16,19 +14,13 @@ body {
     padding-top: 150px;
 }
 
-/* =========================================
-   LIGHT THEME
-   ========================================= */
-
+/* LIGHT THEME */
 body.light {
     background: #f2f5ff;
     color: #111111;
 }
 
-/* =========================================
-   TOP RIGHT CONTROLS
-   ========================================= */
-
+/* TOP RIGHT CONTROLS */
 #topRightControls {
     position: fixed;
     top: 15px;
@@ -40,10 +32,7 @@ body.light {
     gap: 8px;
 }
 
-/* =========================================
-   THEME BUTTON
-   ========================================= */
-
+/* THEME BUTTON */
 #themeBtn {
     width: 42px;
     height: 42px;
@@ -64,8 +53,6 @@ body.light {
     box-shadow: 0 0 15px rgba(0, 230, 118, 0.35);
 }
 
-/* Light mode theme button */
-
 body.light #themeBtn {
     color: #f59e0b;
     border-color: rgba(245, 158, 11, 0.5);
@@ -76,25 +63,17 @@ body.light #themeBtn:hover {
     box-shadow: 0 0 15px rgba(245, 158, 11, 0.35);
 }
 
-/* =========================================
-   DATE & TIME
-   ========================================= */
-
+/* DATE & TIME */
 #dateTime {
     width: 190px;
     padding: 12px 15px;
     text-align: left;
-
     background: rgba(0, 230, 118, 0.10);
     border: 1px solid rgba(0, 230, 118, 0.45);
     border-radius: 10px;
-
     box-shadow: 0 0 15px rgba(0, 230, 118, 0.10);
-
     color: #00e676;
-
     backdrop-filter: blur(8px);
-
     transition: all 0.3s ease;
 }
 
@@ -144,10 +123,7 @@ body.light #themeBtn:hover {
     border-top: 1px solid rgba(0, 230, 118, 0.20);
 }
 
-/* =========================================
-   WEATHER
-   ========================================= */
-
+/* WEATHER */
 #weatherStatus {
     position: fixed;
     top: 20px;
@@ -212,10 +188,7 @@ body.light .forecastItem small {
     color: #555;
 }
 
-/* =========================================
-   HEADER
-   ========================================= */
-
+/* HEADER */
 #sensorPage header {
     text-align: center;
     padding: 40px 20px;
@@ -234,10 +207,7 @@ body.light header p {
     color: #555;
 }
 
-/* =========================================
-   OVERVIEW
-   ========================================= */
-
+/* OVERVIEW */
 .overview {
     display: flex;
     justify-content: center;
@@ -262,10 +232,7 @@ body.light .overview-card {
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.12);
 }
 
-/* =========================================
-   HEALTH STATUS
-   ========================================= */
-
+/* HEALTH STATUS */
 .safe-text {
     color: #00e676;
     margin-top: 15px;
@@ -281,10 +248,7 @@ body.light .overview-card {
     margin-top: 15px;
 }
 
-/* =========================================
-   BRIDGE DECK
-   ========================================= */
-
+/* BRIDGE DECK */
 .bridge-deck {
     width: 700px;
     max-width: 80%;
@@ -303,10 +267,7 @@ body.light .overview-card {
     box-shadow: 0 0 20px rgba(0, 212, 255, 0.6);
 }
 
-/* =========================================
-   SENSORS
-   ========================================= */
-
+/* SENSORS */
 .sensor-grid {
     display: flex;
     justify-content: center;
@@ -319,12 +280,8 @@ body.light .overview-card {
     width: 250px;
     padding: 25px;
     border-radius: 20px;
-
-    /* TRUE DARK MODE */
     background: #0a0a0a;
-
     border: 1px solid #1f1f1f;
-
     text-align: center;
     cursor: pointer;
     transition: 0.4s;
@@ -347,20 +304,15 @@ body.light .sensor-card {
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.12);
 }
 
-/* =========================================
-   DETAILS
-   ========================================= */
-
+/* DETAILS */
 #detailsPanel {
     width: 700px;
     max-width: 90%;
     margin: 50px auto;
     padding: 25px;
     border-radius: 20px;
-
     background: #0a0a0a;
     border: 1px solid #1f1f1f;
-
     display: none;
 }
 
@@ -383,10 +335,8 @@ body.light #detailsPanel {
     width: 180px;
     padding: 20px;
     border-radius: 15px;
-
     background: #050505;
     border: 1px solid #202020;
-
     text-align: center;
 }
 
@@ -396,10 +346,7 @@ body.light .detail-card {
     border: 1px solid #dddddd;
 }
 
-/* =========================================
-   GRAPHS
-   ========================================= */
-
+/* GRAPHS */
 .graph-section {
     width: 900px;
     max-width: 90%;
@@ -417,19 +364,13 @@ body.light canvas {
     background: #ffffff;
 }
 
-/* =========================================
-   ALERTS
-   ========================================= */
-
+/* ALERTS */
 .alerts {
     width: 700px;
     max-width: 90%;
     margin: 50px auto;
-
     background: #0a0a0a;
-
     border: 1px solid #1f1f1f;
-
     padding: 25px;
     border-radius: 20px;
 }
@@ -446,10 +387,7 @@ body.light .alerts {
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.12);
 }
 
-/* =========================================
-   FOOTER
-   ========================================= */
-
+/* FOOTER */
 footer {
     text-align: center;
     padding: 30px;
@@ -460,15 +398,11 @@ body.light footer {
     color: #555;
 }
 
-/* =========================================
-   MOBILE
-   ========================================= */
-
+/* MOBILE */
 @media (max-width: 600px) {
-
-  #sensorPage header h1 {
-    font-size: 30px;
-}
+    #sensorPage header h1 {
+        font-size: 30px;
+    }
 
     #topRightControls {
         top: 10px;
@@ -492,4 +426,134 @@ body.light footer {
         left: 10px;
         width: 200px;
     }
+
+}
+
+/* WEATHER FORECAST TOGGLE BUTTON */
+
+#forecastToggle:hover {
+    background: #00c853;
+    color: white;
+    transform: none;
+}
+
+#forecastToggle:focus-visible {
+    outline: 2px solid #00e676;
+    outline-offset: 3px;
+}
+
+
+#sensorPage #weatherForecast {
+    display: block;
+}
+/* FORCE FORECAST TO TOP LEFT */
+#sensorPage #weatherForecast {
+    position: fixed !important;
+    top: 100px !important;
+    left: 20px !important;
+    right: auto !important;
+    bottom: auto !important;
+    margin: 0 !important;
+    transform: none !important;
+    z-index: 99999 !important;
+    width: 280px;
+}
+
+/* WEATHER FORECAST POSITION AND TOGGLE */
+
+#sensorPage #weatherForecast {
+    position: fixed;
+    top: 180px;
+    left: 25px;
+    right: auto;
+    bottom: auto;
+    width: 240px;
+    margin: 0;
+    transform: none;
+    z-index: 9998;
+}
+
+/* HIDE FORECAST BY DEFAULT */
+#sensorPage #weatherForecast.forecast-hidden {
+    display: none !important;
+}
+
+/* LIGHT MODE */
+body.light #sensorPage #weatherForecast {
+    color: #111111;
+}
+
+/* MOBILE POSITION */
+@media (max-width: 600px) {
+    #sensorPage #weatherForecast {
+        top: 150px;
+        left: 10px;
+        width: 200px;
+    }
+}
+/* WEATHER FORECAST POSITION */
+#sensorPage #weatherForecast {
+    position: fixed !important;
+    top: 75px !important;
+    left: 15px !important;
+    right: auto !important;
+    bottom: auto !important;
+    transform: none !important;
+    margin: 0 !important;
+    width: 260px !important;
+    z-index: 9998 !important;
+}
+
+/* MOBILE */
+@media (max-width: 600px) {
+    #sensorPage #weatherForecast {
+        top: 70px !important;
+        left: 10px !important;
+        width: 220px !important;
+    }
+}
+/* FIX WEATHER ICON AND HEADING */
+#weatherHeading {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-left: 0;
+    margin-bottom: 15px;
+    position: relative;
+}
+
+#forecastToggle {
+    position: static !important;
+    width: 45px;
+    height: 45px;
+    margin: 0;
+    flex-shrink: 0;
+    cursor: pointer;
+    z-index: 1;
+}
+
+#weatherHeading span {
+    display: inline-block;
+}
+#sensorPage #forecastToggle,
+#sensorPage #forecastToggle:hover,
+#sensorPage #forecastToggle:active,
+#sensorPage #forecastToggle:focus {
+    transform: none !important;
+    animation: none !important;
+    transition: none !important;
+}
+#sensorPage #weatherForecast {
+    max-height: 70vh !important;
+    overflow-y: auto !important;
+    overflow-x: hidden !important;
+}
+/* HIDE FORECAST SCROLLBAR */
+#sensorPage #weatherForecast {
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+
+#sensorPage #weatherForecast::-webkit-scrollbar {
+    display: none;
 }
