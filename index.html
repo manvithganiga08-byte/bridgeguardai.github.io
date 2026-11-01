@@ -337,6 +337,51 @@
         }
 
     
+
+        /* WEATHER FORECAST SIDE TOGGLE - only affects the forecast button */
+        #forecastToggle {
+            position: fixed;
+            right: 18px;
+            top: 50%;
+            transform: translateY(-50%);
+            z-index: 10000;
+            width: 48px;
+            height: 48px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 1px solid #00e676;
+            border-radius: 50%;
+            background: #101827;
+            color: #00e676;
+            font-size: 20px;
+            cursor: pointer;
+            box-shadow: 0 4px 16px rgba(0, 230, 118, 0.25);
+        }
+
+        #forecastToggle:hover {
+            background: #00c853;
+            color: #fff;
+        }
+
+        #forecastToggle:focus-visible {
+            outline: 2px solid #fff;
+            outline-offset: 3px;
+        }
+
+        #sensorPage #weatherForecast.forecast-hidden {
+            display: none !important;
+        }
+
+        @media (max-width: 600px) {
+            #forecastToggle {
+                right: 10px;
+                width: 42px;
+                height: 42px;
+                font-size: 18px;
+            }
+        }
+
     </style>
 
     <!-- Original dashboard CSS -->
@@ -1098,22 +1143,31 @@
     <!-- WEATHER -->
     <!-- ============================================== -->
 
-    <div id="weatherStatus">
+  <div id="weatherStatus">
 
-        <div id="weatherHeading">
-            WEATHER
-        </div>
-
-        <div id="weatherCurrent">
-            Loading weather...
-        </div>
-
-        <div id="weatherForecast">
-            Loading forecast...
-        </div>
-
+    <div id="weatherHeading">
+       <button
+    id="forecastToggle"
+    type="button"
+    onclick="toggleForecast()"
+    title="Show 5-Day Forecast"
+    aria-label="Show 5-Day Forecast"
+    aria-controls="weatherForecast"
+    aria-expanded="false">
+    <i class="fas fa-cloud-sun" aria-hidden="true"></i>
+</button>
+        <span>WEATHER</span>
     </div>
 
+    <div id="weatherCurrent">
+        Loading weather...
+    </div>
+
+    <div id="weatherForecast">
+        Loading forecast...
+    </div>
+
+</div>
 
 
     <!-- ============================================== -->
@@ -1616,7 +1670,7 @@
     <footer>
 
         <p>
-            BridgeGuard AI © 2026
+            BridgeGuard © 2026
         </p>
 
     </footer>
@@ -1634,6 +1688,24 @@
 <script src="script.js"></script>
 
 <script>
+function toggleForecast() {
+    const forecast = document.getElementById("weatherForecast");
+    const button = document.getElementById("forecastToggle");
+
+    if (!forecast || !button) return;
+
+    const isHidden = forecast.classList.toggle("forecast-hidden");
+    button.setAttribute("aria-expanded", String(!isHidden));
+    button.setAttribute(
+        "title",
+        isHidden ? "Show 5-Day Forecast" : "Hide 5-Day Forecast"
+    );
+    button.setAttribute(
+        "aria-label",
+        isHidden ? "Show 5-Day Forecast" : "Hide 5-Day Forecast"
+    );
+}
+
 function showMap() {
     document.getElementById("sensorPage").style.display = "none";
     document.getElementById("dashboardStyles").disabled = true;
