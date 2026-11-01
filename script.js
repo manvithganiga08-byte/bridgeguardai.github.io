@@ -1648,13 +1648,7 @@ async function updateWeather() {
             `;
         }
 
-        // Don't show current temperature/humidity here.
-        currentBox.innerHTML = `
-            <div class="currentWeather">
-                <strong>Weather Forecast</strong>
-            </div>
-        `;
-
+       currentBox.innerHTML = "";
         forecastBox.innerHTML = forecastHTML;
 
     }
@@ -1730,3 +1724,10 @@ setInterval(
     updateWeather,
     600000
 );
+function toggleForecast() {
+    const forecast = document.getElementById("weatherForecast");
+
+    if (forecast) {
+        forecast.classList.toggle("forecast-hidden");
+    }
+}
